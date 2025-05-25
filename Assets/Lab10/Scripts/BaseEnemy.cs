@@ -20,8 +20,9 @@ public class BaseEnemy : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             collision.gameObject.GetComponent<BasePlayer>().TakeDamage();
-
+            GameManager.Score += 10;
             Destroy(gameObject);
         }
+
     }
 }
